@@ -1,0 +1,15 @@
+#include<stdio.h>
+int printHW(int count);
+int printHW(int count){
+    if(count==0){
+        return;
+    }
+    else{
+        printf("Hello world \n");
+        printHW(count -1);
+    }
+}
+int main(){
+    printHW(8);
+    return 0;
+}
