@@ -1,0 +1,15 @@
+#include<stdio.h>
+int natural_number(int n){
+    if(n>0){
+        natural_number(n-1);
+        return printf("%d ",n);
+    }
+}
+int main(){
+    int n;
+    printf("Enter any number : ");
+    scanf("%d",&n);
+    printf("Natural numbers from 1 to %d is: ",n);
+    natural_number(n);
+    return 0;
+}
