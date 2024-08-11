@@ -1,0 +1,15 @@
+#include <stdio.h>
+int sumNaturalNumbers(int n) {
+    if(n > 0) {
+        return n + sumNaturalNumbers(n-1);
+    } else {
+        return 0;
+    }
+}
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Sum of natural numbers between 1 to %d: %d\n", n, sumNaturalNumbers(n));
+    return 0;
+}
