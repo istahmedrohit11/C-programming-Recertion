@@ -1,0 +1,37 @@
+#include<stdio.h>
+void print_even(int start,int end){
+    if(start>end)
+        return;
+    else if(start % 2 ==0)
+        printf("%d ",start);
+    print_even(start+1,end);
+}
+void print_odd(int start,int end){
+    if(start>end)
+        return;
+    else if(start % 2 !=0)
+        printf("%d ",start);
+    print_odd(start+1,end);
+}
+int main(){
+    int start,end,choose;
+    printf("Enter the Start of the range: ");
+    scanf("%d",&start);
+     printf("Enter the End of the range: ");
+    scanf("%d",&end);
+    printf("For even numbers Type 1 or odd numbers Type 2:   ");
+    scanf("%d",&choose);
+    if(choose==1){
+        printf("Even numbers in the range are: ");
+        print_even(start,end);
+        printf("\n");
+    }
+     else if(choose==2){
+        printf("0dd numbers in the range are: ");
+        print_odd(start,end);
+        printf("\n");
+    }
+    else
+        printf("Invalid choice\n");
+    return 0;
+}
