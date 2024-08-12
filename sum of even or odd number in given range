@@ -1,0 +1,35 @@
+#include <stdio.h>
+// Function to find sum of even numbers
+int sum_even(int start, int end) {
+    if (start > end)
+        return 0;
+    else if (start % 2 == 0)
+        return start + sum_even(start + 1, end);
+    else
+        return sum_even(start + 1, end);
+}
+// Function to find sum of odd numbers
+int sum_odd(int start, int end) {
+    if (start > end)
+        return 0;
+    else if (start % 2 != 0)
+        return start + sum_odd(start + 1, end);
+    else
+        return sum_odd(start + 1, end);
+}
+int main() {
+    int start, end, choice;
+    printf("Enter the start of the range: ");
+    scanf("%d", &start);
+    printf("Enter the end of the range: ");
+    scanf("%d", &end);
+    printf("Do you want to find sum of even numbers (1) or odd numbers (2)? ");
+    scanf("%d", &choice);
+    if (choice == 1)
+        printf("Sum of even numbers in the range is: %d\n", sum_even(start, end));
+    else if (choice == 2)
+        printf("Sum of odd numbers in the range is: %d\n", sum_odd(start, end));
+    else
+        printf("Invalid choice\n");
+    return 0;
+}
