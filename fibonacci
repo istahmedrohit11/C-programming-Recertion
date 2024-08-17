@@ -7,6 +7,9 @@
  return fibonacci(n-1)+fibonacci(n-2);
  }
 int main(){
-    int n=10;
-    printf("The value of fibonacci series at %d is %d",n,fibonacci(n));
+    int n;
+    printf("Enter any number : ");
+    scanf("%d",&n);
+    printf("%dth Fibonacci term : %d",n,fibonacci(n));
+    return 0;
 }
